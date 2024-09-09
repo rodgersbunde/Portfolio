@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rodgers Bonaventure | Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to right, #f0f8ff, #e6e6fa);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            padding: 15px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        header nav ul li {
+            margin-left: 20px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 50px;
+        }
+
+        #home {
+            background-color: rgba(224, 247, 250, 0.8);
+            text-align: center;
+        }
+
+        #about {
+            background-color: rgba(255, 236, 179, 0.8);
+        }
+
+        #education-work {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            background-color: rgba(245, 245, 245, 0.8);
+            padding: 20px;
+        }
+
+        .education,
+        .work-experience {
+            flex: 1;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .education h2,
+        .work-experience h2 {
+            margin-top: 0;
+        }
+
+        #skills {
+            background-color: rgba(225, 190, 231, 0.8);
+        }
+
+        #projects {
+            padding: 50px;
+            background-color: rgba(200, 230, 201, 0.8);
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .project-item {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .project-item h3 {
+            margin: 10px 0;
+            font-size: 24px;
+        }
+
+        .project-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .project-item p {
+            margin: 10px 0 20px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .project-item a {
+            display: inline-block;
+            margin: 5px 10px;
+            padding: 8px 15px;
+            color: white;
+            background-color: #0077b5;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .project-item a:hover {
+            background-color: #005582;
+        }
+
+        #contact {
+            background-color: rgba(255, 204, 188, 0.8);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .social-icons {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .social-icons a {
+            margin: 0 15px;
+            color: #333;
+            text-decoration: none;
+            font-size: 30px;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #0077b5;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education-work">Education & Work</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="intro">
+            <img src="profile.jpeg" alt="Your Photo" class="profile.jpeg">
+            <h1>Welcome to My Portfolio</h1>
+            <p>Hello! I'm Rodgers Bonaventure</p>
+            <p>Data Scientist.</p>
+        </div>
+    </section>
+
+    <!-- Social Icons Section -->
+    <div class="social-icons">
+        <a href="https://www.linkedin.com/in/rodgersbonaventure/" target="_blank">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/rodgersbunde" target="_blank">
+            <i class="fab fa-github"></i>
+        </a>
+    </div>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>A prudent, highly skilled, and detail-oriented Data Scientist with a strong background in
+            data analysis, machine learning, and business strategy. Proficient in gathering,
+            organizing, and interpreting complex data sets to extract meaningful insights and
+            identify trends. Experienced in developing and implementing advanced analytics and
+            machine learning models to improve operational efficiency and drive informed decisionmaking. Possesses excellent problem-solving abilities coupled with effective
+            communication skills to collaborate with cross-functional teams and stakeholders at all
+            levels. Adept at using various programming languages, BI tools, data visualization
+            techniques, and statistical analysis methods to transform data into actionable
+            intelligence and strategic solutions
+            </p>
+    </section>
+
+    <!-- Education & Work Experience Section -->
+    <section id="education-work">
+        <!-- Education Section -->
+        <div class="education">
+            <h2>Education</h2>
+            <ul>
+                <li>
+                    <h3>Data Science</h3>
+                    <h3>Moringa School</h3>
+                    <p>2023 - 2024</p>
+                </li>
+                <li>
+                    <h3>Business Intelligence</h3>
+                    <h3>Sonek Data School</h3>
+                    <p>2022 - 2023</p>
+                </li>
+                <li>
+                    <h3>Diploma in Tax Administration</h3>
+                    <h3>Kenya School of Revenue Administration</h3>
+                    <p>2019 - 2022</p>
+                </li>
+                <li>
+                    <h3>Certificate in Tax Administration</h3>
+                    <h3>Kenya School of Revenue Administration</h3>
+                    <p>2018 - 2019</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Work Experience Section -->
+        <div class="work-experience">
+            <h2>Work Experience</h2>
+            <ul>
+                <li>
+                    <h3>Junior Process Analyst, Watu Credit LTD</h3>
+                    <p>June 2024 - Present</p>
+                    <p>Liaise with other departments throughout the company to streamline operations.with a focus on efficiency and accountability.</p>
+                    <p> Ensuring functionality,completeness and accuracy of data both coming in and going out.</p>
+                    <p> Build case overview dashboards using Looker studio.</p>
+                    <p> Build and manage business systems.</p>
+                    <p>  Utilizing industry best practices in writing SQL queries to ensure efficient and
+                        optimized database operations, contributing to improved data retrieval and
+                        processing within the organization.</p>
+                </li>
+                <li>
+                    <h3>Asset Transfer Ownership Officer, Watu Credit</h3>
+                    <p>Jan 2022 - May 2024</p>
+                    <p>Conducting due diligence is an essential part of the asset transfer process, as
+                        the responsible party for gathering and analyzing information about the assets,
+                        verifying their ownership, assessing their market value, and identifying any
+                        potential risks or legal issues associated with the transfer</p>
+                    <P>Prepare and review various legal documents and contracts related to asset
+                        transfer, such as purchase agreements, transfer deeds, title certificates, and
+                        financial agreements.</P>
+                    <P>Interacting with multiple stakeholders, including buyers, sellers, legal
+                       professionals, and financial institutions, maintaining clear and professional
+                        communication throughout the transfer process, providing updates, addressing
+                        concerns, and ensuring all parties are well-informed</P>
+                    <P>Ensure that all asset transfers comply with relevant laws, regulations, and
+                       industry standards. This includes understanding and adhering to legal
+                        requirements, tax obligations, licensing procedures, and any other applicable
+                        regulations specific to the assets being transferred.</P>  
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>My Skills</h2>
+        <div class="skills-list">
+            <div class="skill-item">Python</div>
+            <div class="skill-item">Big Query</div>
+            <div class="skill-item">Machine Learning</div>
+            <div class="skill-item">Looker Studio</div>
+            <div class="skill-item">SQL</div>
+            <div class="skill-item">Business Intelligence</div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project-grid">
+            <!-- Project 1 -->
+            <div class="project-item">
+                <h3>Data Dining Delight</h3>
+                <img src="recipe.jpg" alt="Project 1 Image">
+                <p>Recommendation System to Leverage recipe recommendation to users.</p>
+                <a href="https://github.com/rodgersbunde/Project_5" target="_blank">View on GitHub</a> |
+                <a href="https://project5-dzcyfewvdxyzguymod7w3y.streamlit.app/" target="_blank">Visit Website</a>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-item">
+                <h3>Patient Treatment Classification</h3>
+                <img src="HOSP.jpg" alt="Project 2 Image">
+                <p>Machine learning models for classifying patients as either requiring inpatient or outpatient care..</p>
+                <a href=" https://github.com/rodgersbunde/Project_3" target="_blank">View on GitHub</a> |
+                <a href="https://project3-lctvn8dtxh28og5xdeapzp.streamlit.app/" target="_blank">Visit Website</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Rodgers Bonaventure. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
