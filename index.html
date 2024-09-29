@@ -1,284 +1,384 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rodgers Bonaventure | Portfolio</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
     <style>
-        body {
-            background-color: #0a192f; /* Dark blue background */
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #ccd6f6; /* Light blue text */
-        }
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
 
-        header {
-            background-color: #0a192f; /* Same dark blue as background */
-            padding: 15px;
-            display: flex;
-            justify-content: flex-end;
-        }
+      body {
+        background-color: #0a192f; /* Dark blue background */
+        font-family: "Poppins", Arial, sans-serif; /* Modern font */
+        margin: 0;
+        color: #ccd6f6; /* Light blue text */
+        scroll-behavior: smooth; /* Smooth scroll for anchor links */
+      }
 
+      header {
+        background-color: rgba(10, 25, 47, 0.9);
+        padding: 20px;
+        display: flex;
+        justify-content: flex-end;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        transition: background-color 0.3s; /* Smooth background transition */
+      }
+
+      header nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+      }
+
+      header nav ul li {
+        margin-left: 30px;
+      }
+
+      header nav ul li a {
+        color: #64ffda;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 18px;
+        transition: color 0.3s ease-in-out, transform 0.2s;
+      }
+
+      header nav ul li a:hover {
+        color: #ccd6f6;
+        transform: scale(1.1);
+      }
+
+      section {
+        padding: 60px 15px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      #home {
+        text-align: center;
+        padding: 100px 15px;
+        background: linear-gradient(135deg, #0a192f 30%, #112240);
+      }
+
+      .intro img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+        border: 4px solid #64ffda;
+        transition: transform 0.3s ease;
+      }
+
+      .intro img:hover {
+        transform: scale(1.1);
+      }
+
+      .intro h1 {
+        margin: 20px 0;
+        font-size: 42px;
+        color: #64ffda;
+      }
+
+      .intro p {
+        color: #8892b0;
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+      .social-icons {
+        margin: 30px 0;
+      }
+
+      .social-icons a {
+        margin: 0 15px;
+        color: #64ffda;
+        font-size: 36px;
+        transition: color 0.3s, transform 0.3s;
+      }
+
+      .social-icons a:hover {
+        color: #ccd6f6;
+        transform: scale(1.2);
+      }
+
+      h2 {
+        color: #64ffda;
+        font-size: 36px;
+        text-align: center;
+        margin-bottom: 40px;
+        position: relative;
+      }
+
+      h2::after {
+        content: "";
+        width: 60px;
+        height: 4px;
+        background-color: #64ffda;
+        display: block;
+        margin: 10px auto;
+      }
+
+      #education-work {
+        background-color: #0a192f;
+        color: #ccd6f6;
+      }
+
+      .timeline {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+      }
+
+      .timeline-item {
+        background-color: #112240;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+      }
+
+      .timeline-item:hover {
+        transform: translateY(-5px);
+        background-color: #1e3a5f;
+      }
+
+      .timeline-item h3 {
+        font-size: 1.4em;
+        margin: 10px 0;
+        color: #64ffda;
+      }
+
+      .skills-section {
+        padding: 20px;
+        background-color: #f4f4f4;
+        border-radius: 8px;
+        max-width: 800px; /* Optional: restricts the width for better layout */
+        margin: 0 auto; /* Centers the section */
+        text-align: center;
+      }
+
+      .skills-list {
+        display: flex;
+        flex-direction: column; /* Stacks skill items vertically */
+        gap: 15px; /* Spacing between skill items */
+      }
+
+      .skill-item {
+        display: flex;
+        flex-direction: column; /* Aligns text and bar vertically */
+        align-items: flex-start; /* Aligns text to the start */
+      }
+
+      .skill-name {
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: #333;
+      }
+
+      .skill-bar {
+        width: 100%; /* Full width of the container */
+        background-color: #ddd; /* Background of the skill bar */
+        border-radius: 5px;
+        overflow: hidden; /* Ensures the skill level bar stays within bounds */
+      }
+
+      .skill-level {
+        height: 10px; /* Height of the skill level bar */
+        border-radius: 5px; /* Rounded corners */
+        transition: width 0.3s ease; /* Smooth transition for skill levels */
+      }
+
+      .python {
+        width: 70%;
+        background-color: #3572a5;
+      } /* Example skill level for Python */
+      .ls {
+        width: 75%;
+        background-color: #4c3cb3;
+      } /* Example skill level for R */
+      .ml {
+        width: 80%;
+        background-color: #ffd700;
+      } /* Example skill level for Machine Learning */
+      .bi {
+        width: 85%;
+        background-color: #ff4500;
+      } /* Example skill level for Data Visualization */
+      .sql {
+        width: 90%;
+        background-color: #00a854;
+      } /* Example skill level for SQL */
+      .bq {
+        width: 80%;
+        background-color: #8a2be2;
+      } /* Example skill level for Statistics */
+      .dl {
+        width: 75%;
+        background-color: #ff69b4;
+      } /* Example skill level for Deep Learning */
+
+      .project-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+      }
+
+      .project-item {
+        background-color: #0a192f;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        transition: transform 0.3s ease;
+      }
+
+      .project-item:hover {
+        transform: translateY(-10px);
+      }
+
+      .project-item img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        border: 3px solid #64ffda;
+      }
+
+      .contact-section {
+        padding: 20px 20px; /* Adjusts top and bottom to 20px, left and right to 20px */
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        text-align: center;
+        margin: 20px 0;
+        max-width: 800px; /* Optional: restricts the width for better layout */
+        margin-left: auto; /* Centers the section horizontally */
+        margin-right: auto; /* Centers the section horizontally */
+      }
+
+      .contact-section h2 {
+        margin-bottom: 10px;
+      }
+
+      .contact-section p {
+        margin-bottom: 15px;
+        font-size: 16px;
+        color: #333;
+      }
+
+      .contact-button {
+        display: inline-block;
+        padding: 10px 15px;
+        margin-bottom: 15px;
+        background-color: #007bff; /* Primary button color */
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+
+      .contact-button:hover {
+        background-color: #0056b3; /* Darker shade on hover */
+      }
+
+      .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .social-icons a {
+        font-size: 24px;
+        color: #333;
+        transition: color 0.3s;
+      }
+
+      .social-icons a:hover {
+        color: #007bff; /* Change color on hover */
+      }
+
+      footer {
+        background-color: #112240;
+        color: #8892b0;
+        text-align: center;
+        padding: 40px 20px;
+        border-top: 1px solid #64ffda;
+      }
+
+      footer p {
+        margin: 0;
+        color: #ccd6f6;
+      }
+
+      @media (max-width: 768px) {
         header nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
+          flex-direction: column; /* Stack links on mobile */
+          align-items: center;
         }
 
         header nav ul li {
-            margin-left: 20px;
-        }
-
-        header nav ul li a {
-            color: #64ffda; /* Teal for links */
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 18px;
-            transition: color 0.3s;
-        }
-
-        header nav ul li a:hover {
-            color: #ccd6f6; /* Light blue hover effect */
-        }
-
-        section {
-            padding: 50px;
-            color: #ccd6f6;
-        }
-
-        #home {
-            background-color: #0a192f;
-            color: #ccd6f6;
-            text-align: center;
-        }
-
-        .intro img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin-bottom: 20px;
-            border: 2px solid #64ffda; /* Teal border around profile image */
+          margin: 10px 0; /* Adjust margin for mobile */
         }
 
         .intro h1 {
-            margin: 20px 0;
-            font-size: 36px;
-            color: #64ffda; /* Teal color for emphasis */
+          font-size: 34px; /* Adjust font size for smaller screens */
         }
 
         .intro p {
-            color: #8892b0; /* Slightly muted light blue for subtext */
-        }
-
-        .social-icons {
-            margin: 20px 0;
-            text-align: center;
-        }
-
-        .social-icons a {
-            margin: 0 10px;
-            color: #64ffda; /* Teal for social icons */
-            font-size: 30px;
-            transition: color 0.3s;
-        }
-
-        .social-icons a:hover {
-            color: #ccd6f6; /* Light blue on hover */
-        }
-
-        #about,
-        #skills,
-        #projects,
-        #contact {
-            background-color: #112240; /* Slightly lighter dark blue */
+          font-size: 16px; /* Adjust font size for smaller screens */
         }
 
         h2 {
-            color: #64ffda; /* Teal color for section titles */
+          font-size: 30px; /* Adjust font size for smaller screens */
         }
 
-        /* Education & Work Experience Section */
-        #education-work {
-            display: flex;
-            justify-content: space-between;
-            gap: 20px;
-            margin-top: 40px;
-        }
-
-        .timeline {
-            display: flex;
-            flex-direction: column;
-            gap: 20px; /* Reduced space between timeline items */
-        }
-
-        .timeline-item {
-            background-color: #112240; /* Box background */
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            position: relative;
-        }
-
-        .timeline-item h3 {
-            font-size: 1.5em;
-            color: #ccd6f6;
-            margin-bottom: 5px;
-        }
-
-        .timeline-item p {
-            font-size: 1.1em;
-            color: #8892b0;
-            line-height: 1.6;
-        }
-
-        .timeline-item span {
-            font-size: 1.1em;
-            color: #A9A9A9;
-            margin-bottom: 10px;
-        }
-
-        /* Skills Section */
         .skills-list {
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        .skills-list .skill-item {
-            background-color: #0a192f;
-            color: #64ffda;
-            padding: 10px 15px;
-            border-radius: 5px;
-            margin: 5px;
+          flex-direction: column; /* Stack skills on mobile */
+          align-items: center; /* Center align skills */
         }
 
         .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
+          grid-template-columns: 1fr; /* Single column on mobile */
         }
-
-        .project-item {
-            background-color: #0a192f;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-
-        .project-item h3 {
-            color: #64ffda;
-        }
-
-        .project-item img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin-bottom: 15px;
-            border: 2px solid #64ffda;
-        }
-
-        .project-item p {
-            color: #8892b0; /* Muted text for project descriptions */
-        }
-
-        .project-item a {
-            display: inline-block;
-            margin: 5px 10px;
-            padding: 8px 15px;
-            color: #0a192f;
-            background-color: #64ffda;
-            text-decoration: none;
-            border-radius: 4px;
-            transition: background-color 0.3s;
-        }
-
-        .project-item a:hover {
-            background-color: #ccd6f6; /* Lighter blue hover for project links */
-        }
-        #contact form {
-            max-width: 600px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-        }
-
-        #contact form input,
-        #contact form textarea {
-            margin-bottom: 15px;
-            padding: 10px;
-            font-size: 16px;
-            border-radius: 4px;
-            border: 1px solid #8892b0;
-            background-color: #0a192f;
-            color: #ccd6f6;
-        }
-
-        #contact form button {
-            padding: 10px;
-            font-size: 16px;
-            border: none;
-            border-radius: 4px;
-            background-color: #64ffda;
-            color: #0a192f;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        #contact form button:hover {
-            background-color: #ccd6f6;
-        }
-
-        footer {
-            background-color: #0a192f;
-            color: #ccd6f6;
-            text-align: center;
-            padding: 20px;
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Header Section -->
     <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#education-work">Education & Work</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#education-work">Education & Work</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </header>
 
     <!-- Home Section -->
     <section id="home">
-        <div class="intro">
-            <img src="profile.jpeg" alt="Your Photo">
-            <h1>Welcome to My Portfolio</h1>
-            <p>Hello! I'm Rodgers Bonaventure</p>
-            <p>Data Scientist.</p>
-        </div>
+      <div class="intro">
+        <img src="profile.jpeg" alt="Your Photo" />
+        <h1>Welcome to My Portfolio</h1>
+        <p>Hello! I'm Rodgers Bonaventure</p>
+        <p>Data Scientist.</p>
+      </div>
     </section>
-
-    <!-- Social Icons Section -->
-    <div class="social-icons">
-        <a href="https://www.linkedin.com/in/rodgersbonaventure/" target="_blank">
-            <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://github.com/rodgersbunde" target="_blank">
-            <i class="fab fa-github"></i>
-        </a>
-    </div>
 
     <!-- About Section -->
     <section id="about">
-        <h2>About Me</h2>
-        <p>A prudent, highly skilled, and detail-oriented Data Scientist with a strong background in
+      <h2>About Me</h2>
+      <p>A prudent, highly skilled, and detail-oriented Data Scientist with a strong background in
             data analysis, machine learning, and business strategy. Proficient in gathering,
             organizing, and interpreting complex data sets to extract meaningful insights and
             identify trends. Experienced in developing and implementing advanced analytics and
@@ -287,127 +387,168 @@
             levels.</p>
     </section>
 
-    <!-- Education & Work Experience Section -->
+    <!-- Education & Work Section -->
     <section id="education-work">
-        <div class="education">
-            <h2>Education</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <span>Sept 2023 - April 2024</span>
-                    <h3>Moringa School</h3>
-                    <p>Data Science</p>
-                </div>
-                <div class="timeline-item">
-                    <span>2022  - 2023</span>
-                    <h3>Sonek Data School</h3>
-                    <p>Business Intelligence</p>
-                </div>
-                <div class="timeline-item">
-                    <span>2019 - 2022</span>
-                    <h3>Kenya School of Revenue Administration</h3>
-                    <p>Diploma in Tax Administration</p>
-                </div>
-                <div class="timeline-item">
-                    <span>2018 - 2019</span>
-                    <h3>Kenya School of Revenue Administration</h3>
-                    <p>Certificate in Tax Administration</p>
-                </div>
-                <div class="timeline-item">
-                    <span>2014 - 2017</span>
-                    <h3>Ramba High School</h3>
-                    <p>Kenya Certificate of Secondary Education</p>
-                </div>
-            </div>
+      <h2>Education & Work Experience</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>Data Science </h3>
+          <p>Moringa School | 2023 - 2024</p>
+          <p>Focus on data analysis and machine learning.</p>
         </div>
-
-        <div class="work-experience">
-            <h2>Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <span>June 2024 - Present</span>
-                    <h3>Junior Process Analyst - Watu Africa</h3>
-                    <ul>
-                        <li>Liaise with other departments throughout the company to streamline operations with a focus on efficiency and accountability</li>
-                        <li>Ensuring functionality, completeness, and accuracy of data both coming in and going out.</li>
-                        <li>Build case overview dashboards using Looker Studio. Build and manage business systems.</li>
-                        <li>Utilize industry best practices in writing SQL queries to ensure efficient and optimized database operations, contributing to improved data retrieval and processing within the organization.</li>
-                    </ul>
-                </div>
-                <div class="timeline-item">
-                    <span>Jan 2022 - May 2024</span>
-                    <h3>Asset Transfer Ownership Officer - Watu Africa</h3>
-                    <ul>
-                        <li>Conducting due diligence is an essential part of the asset transfer process, as
-                            the responsible party for gathering and analyzing information about the assets,
-                            verifying their ownership, assessing their market value, and identifying any
-                            potential risks or legal issues associated with the transfer</li>
-                        <li>Prepare and review various legal documents and contracts related to asset
-                            transfer, such as purchase agreements, transfer deeds, title certificates, and
-                            financial agreements.</li>
-                        <li>Ensure that all asset transfers comply with relevant laws, regulations, and
-                            industry standards. This includes understanding and adhering to legal
-                            requirements, tax obligations, licensing procedures, and any other applicable
-                            regulations specific to the assets being transferred</li>
-                        <li>Interacting with multiple stakeholders, including buyers, sellers, legal
-                            professionals, and financial institutions, maintaining clear and professional
-                            communication throughout the transfer process, providing updates, addressing
-                            concerns, and ensuring all parties are well-informed</li>
-                    </ul>
-                </div>
-            </div>
+        <div class="timeline-item">
+          <h3>Junior Process Analyst</h3>
+          <p>Watu Africa |July 2024 - Present</p>
+          <p>Liaise with other departments throughout the company to streamline operations with a focus on efficiency and accountability</p>
+          <p>Ensuring functionality, completeness, and accuracy of data both coming in and going out.</p>
+          <p>Build case overview dashboards using Looker Studio. Build and manage business systems.</p>
+          <p>Utilize industry best practices in writing SQL queries to ensure efficient and optimized database operations, contributing to improved data retrieval and processing within the organization.</p>
         </div>
+        <div class="timeline-item">
+          <h3>Asset Transfer Ownership Officer</h3>
+          <p>Watu Africa | Jan 2021 - May 2024</p>
+          <p>Conducting due diligence is an essential part of the asset transfer process, as
+            the responsible party for gathering and analyzing information about the assets,
+            verifying their ownership, assessing their market value, and identifying any
+            potential risks or legal issues associated with the transfer</p>
+          <p>Prepare and review various legal documents and contracts related to asset
+            transfer, such as purchase agreements, transfer deeds, title certificates, and
+            financial agreements</p>
+          <p>Ensure that all asset transfers comply with relevant laws, regulations, and
+            industry standards. This includes understanding and adhering to legal
+            requirements, tax obligations, licensing procedures, and any other applicable
+            regulations specific to the assets being transferred</p>
+        </div>
+      </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills">
-        <h2>My Skills</h2>
-        <div class="skills-list">
-            <div class="skill-item">Python</div>
-            <div class="skill-item">SQL</div>
-            <div class="skill-item">BigQuery</div>
-            <div class="skill-item">Machine Learning</div>
-            <div class="skill-item">Looker Studio</div>
-            <div class="skill-item">Business Intelligence</div>
-            <div class="skill-item">Power BI</div>
+    <section id="skills" class="skills-section">
+      <h2>Skills</h2>
+      <div class="skills-list">
+        <div class="skill-item">
+          <span class="skill-name">SQL</span>
+          <div class="skill-bar">
+            <div class="skill-level sql"></div>
+          </div>
         </div>
+        <div class="skill-item">
+          <span class="skill-name">Looker studio</span>
+          <div class="skill-bar">
+            <div class="skill-level ls"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">Machine Learning</span>
+          <div class="skill-bar">
+            <div class="skill-level ml"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">Business Intelligence</span>
+          <div class="skill-bar">
+            <div class="skill-level bi "></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">Python</span>
+          <div class="skill-bar">
+            <div class="skill-level python"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">Big Query</span>
+          <div class="skill-bar">
+            <div class="skill-level bq"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">Version Control</span>
+          <div class="skill-bar">
+            <div class="skill-level dl"></div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Projects Section -->
+    <!-- Projects Section -->
     <section id="projects">
-        <h2>My Projects</h2>
-        <div class="project-grid">
-            <div class="project-item">
-                <h3>Data Dining Delight</h3>
-                <img src="recipe.jpg" alt="Project 1 Image">
-                <p>Recommendation System leveraging recipe suggestions.</p>
-                <a href="https://github.com/rodgersbunde/Project_5" target="_blank">View on GitHub</a> |
-                <a href="#" target="_blank">Visit Website</a>
-            </div>
-            <div class="project-item">
-                <h3>Patient Treatment Classification</h3>
-                <img src="patient.jpg" alt="Project 2 Image">
-                <p>Machine learning models for classifying patients as either requiring inpatient or outpatient care.</p>
-                <a href="https://github.com/rodgersbunde/Project_3" target="_blank">View on GitHub</a> |
-                <a href="https://project3-lctvn8dtxh28og5xdeapzp.streamlit.app/" target="_blank">Visit Website</a>
-            </div>
+      <h2>My Projects</h2>
+      <div class="project-grid">
+        <div class="project-item">
+          <h3>Data Dining Delight</h3>
+          <img src="recipe.jpg" alt="Data Dining Delight Project Image" />
+          <p>Recommendation system leveraging recipe suggestions.</p>
+          <a href="https://github.com/rodgersbunde/Project_5" target="_blank"
+            >View on GitHub</a
+          >
+          |
+          <a href="#" target="_blank">Visit Website</a>
         </div>
+        <div class="project-item">
+          <h3>Patient Treatment Classification</h3>
+          <img
+            src="patient.jpg"
+            alt="Patient Treatment Classification Project Image"
+          />
+          <p>
+            Machine learning models for classifying patients as either requiring
+            inpatient or outpatient care.
+          </p>
+          <a href="https://github.com/rodgersbunde/Project_3" target="_blank"
+            >View on GitHub</a
+          >
+          |
+          <a
+            href="https://project3-lctvn8dtxh28og5xdeapzp.streamlit.app/"
+            target="_blank"
+            >Visit Website</a
+          >
+        </div>
+      </div>
     </section>
 
     <!-- Contact Section -->
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <form>
-            <input type="text" name="name" placeholder="Name" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
+    <section class="contact-section" id="contact">
+      <h2>Contact Me</h2>
+      <p>
+        If you're interested in working together or have any questions, feel
+        free to reach out to me. I'm always open to new projects and
+        collaborations!
+      </p>
+      <a href="roggybunde@gmail.com" class="contact-button"
+        >Get in Touch</a
+      >
+
+      <div class="social-icons">
+        <a
+          href="https://www.linkedin.com/in/rodgersbonaventure/"
+          target="_blank"
+          aria-label="LinkedIn"
+        >
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a
+          href="https://github.com/rodgersbunde"
+          target="_blank"
+          aria-label="GitHub"
+        >
+          <i class="fab fa-github"></i>
+        </a>
+        <a
+          href="https://twitter.com/yourprofile"
+          target="_blank"
+          aria-label="Twitter"
+        >
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
     </section>
 
-    <!-- Footer Section -->
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Rodgers Bonaventure. All Rights Reserved.</p>
+      <p>&copy; 2024 Rodgers Bonaventure. All Rights Reserved.</p>
     </footer>
-</body>
+  </body>
 </html>
