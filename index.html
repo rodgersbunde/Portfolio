@@ -68,6 +68,14 @@
         background: linear-gradient(135deg, #0a192f 30%, #112240);
       }
 
+      #about {
+        text-align: center;
+        margin: 15px;
+        background: #112240;
+        border-radius: 8px;
+        text-align: center;
+      }
+
       .intro img {
         width: 150px;
         height: 150px;
@@ -129,6 +137,36 @@
       #education-work {
         background-color: #0a192f;
         color: #ccd6f6;
+      }
+
+      #education {
+        background-color: #0a192f;
+        color: #ccd6f6;
+      }
+
+      .timeline-education {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+
+      .timeline-item-edu {
+        background-color: #112240;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+      }
+
+      .timeline-item-edu:hover {
+        transform: translateY(-5px);
+        background-color: #1e3a5f;
+      }
+
+      .timeline-item-edu h3 {
+        font-size: 1.4em;
+        margin: 10px 0;
+        color: #64ffda;
       }
 
       .timeline {
@@ -357,7 +395,8 @@
         <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#education-work">Education & Work</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#education-work">Work</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -378,46 +417,93 @@
     <!-- About Section -->
     <section id="about">
       <h2>About Me</h2>
-      <p>A prudent, highly skilled, and detail-oriented Data Scientist with a strong background in
-            data analysis, machine learning, and business strategy. Proficient in gathering,
-            organizing, and interpreting complex data sets to extract meaningful insights and
-            identify trends. Experienced in developing and implementing advanced analytics and
-            machine learning models to improve operational efficiency and drive informed decision making. Possesses excellent problem-solving abilities coupled with effective
-            communication skills to collaborate with cross-functional teams and stakeholders at all
-            levels.</p>
+      <p>
+        A prudent, highly skilled, and detail-oriented Data Scientist with a
+        strong background in data analysis, machine learning, and business
+        strategy. Proficient in gathering, organizing, and interpreting complex
+        data sets to extract meaningful insights and identify trends.
+        Experienced in developing and implementing advanced analytics and
+        machine learning models to improve operational efficiency and drive
+        informed decision making. Possesses excellent problem-solving abilities
+        coupled with effective communication skills to collaborate with
+        cross-functional teams and stakeholders at all levels.
+      </p>
     </section>
 
     <!-- Education & Work Section -->
-    <section id="education-work">
-      <h2>Education & Work Experience</h2>
-      <div class="timeline">
-        <div class="timeline-item">
-          <h3>Data Science </h3>
+    <section id="education">
+      <h2>Education</h2>
+      <div class="timeline-education">
+        <div class="timeline-item-edu">
+          <h3>Data Science</h3>
           <p>Moringa School | 2023 - 2024</p>
           <p>Focus on data analysis and machine learning.</p>
         </div>
+        <div class="timeline-item-edu">
+          <h3>Business Intelligence</h3>
+          <p>Sonek Data School | 2022 - 2023</p>
+          <p>Focus on data analysis and machine learning.</p>
+        </div>
+        <div class="timeline-item-edu">
+          <h3>Diploma in Tax Administration</h3>
+          <p>Sonek Data School | 2022 - 2023</p>
+          <p>Focus on data analysis and machine learning.</p>
+        </div>
+        <div class="timeline-item-edu">
+          <h3>Certificate in Tax Administration</h3>
+          <p>Sonek Data School | 2022 - 2023</p>
+          <p>Focus on data analysis and machine learning.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work Section -->
+    <section id="education-work">
+      <h2>Work Experience</h2>
+      <div class="timeline">
         <div class="timeline-item">
           <h3>Junior Process Analyst</h3>
           <p>Watu Africa |July 2024 - Present</p>
-          <p>Liaise with other departments throughout the company to streamline operations with a focus on efficiency and accountability</p>
-          <p>Ensuring functionality, completeness, and accuracy of data both coming in and going out.</p>
-          <p>Build case overview dashboards using Looker Studio. Build and manage business systems.</p>
-          <p>Utilize industry best practices in writing SQL queries to ensure efficient and optimized database operations, contributing to improved data retrieval and processing within the organization.</p>
+          <p>
+            Liaise with other departments throughout the company to streamline
+            operations with a focus on efficiency and accountability
+          </p>
+          <p>
+            Ensuring functionality, completeness, and accuracy of data both
+            coming in and going out.
+          </p>
+          <p>
+            Build case overview dashboards using Looker Studio. Build and manage
+            business systems.
+          </p>
+          <p>
+            Utilize industry best practices in writing SQL queries to ensure
+            efficient and optimized database operations, contributing to
+            improved data retrieval and processing within the organization.
+          </p>
         </div>
         <div class="timeline-item">
           <h3>Asset Transfer Ownership Officer</h3>
           <p>Watu Africa | Jan 2021 - May 2024</p>
-          <p>Conducting due diligence is an essential part of the asset transfer process, as
-            the responsible party for gathering and analyzing information about the assets,
-            verifying their ownership, assessing their market value, and identifying any
-            potential risks or legal issues associated with the transfer</p>
-          <p>Prepare and review various legal documents and contracts related to asset
-            transfer, such as purchase agreements, transfer deeds, title certificates, and
-            financial agreements</p>
-          <p>Ensure that all asset transfers comply with relevant laws, regulations, and
-            industry standards. This includes understanding and adhering to legal
-            requirements, tax obligations, licensing procedures, and any other applicable
-            regulations specific to the assets being transferred</p>
+          <p>
+            Conducting due diligence is an essential part of the asset transfer
+            process, as the responsible party for gathering and analyzing
+            information about the assets, verifying their ownership, assessing
+            their market value, and identifying any potential risks or legal
+            issues associated with the transfer
+          </p>
+          <p>
+            Prepare and review various legal documents and contracts related to
+            asset transfer, such as purchase agreements, transfer deeds, title
+            certificates, and financial agreements
+          </p>
+          <p>
+            Ensure that all asset transfers comply with relevant laws,
+            regulations, and industry standards. This includes understanding and
+            adhering to legal requirements, tax obligations, licensing
+            procedures, and any other applicable regulations specific to the
+            assets being transferred
+          </p>
         </div>
       </div>
     </section>
@@ -447,7 +533,7 @@
         <div class="skill-item">
           <span class="skill-name">Business Intelligence</span>
           <div class="skill-bar">
-            <div class="skill-level bi "></div>
+            <div class="skill-level bi"></div>
           </div>
         </div>
         <div class="skill-item">
@@ -517,9 +603,7 @@
         free to reach out to me. I'm always open to new projects and
         collaborations!
       </p>
-      <a href="roggybunde@gmail.com" class="contact-button"
-        >Get in Touch</a
-      >
+      <a href="roggybunde@gmail.com" class="contact-button">Get in Touch</a>
 
       <div class="social-icons">
         <a
