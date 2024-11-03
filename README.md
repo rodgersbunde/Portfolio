@@ -39,9 +39,9 @@ This portfolio utilizes the following technologies:
 Feel free to reach out for any inquiries or collaborations!
 
 - Email: [roggybunde@gmail.com](roggybunde@gmail.com)
-- Portfolio link:(https://rodgersportfolio.netlify.app/)
+- Portfolio link:https://rodgersportfolio.netlify.app/
 
----
 
-Thank you for visiting my portfolio!
+
+### Thank you for visiting my portfolio!
 
