@@ -22,7 +22,7 @@ A prudent, highly skilled, and detail-oriented Data Scientist with a strong back
 This portfolio utilizes the following technologies:
 - HTML
 - CSS
-- JavaScript (optional)
+- React
 - Responsive design principles
 
 ## Features
@@ -38,8 +38,8 @@ This portfolio utilizes the following technologies:
 
 Feel free to reach out for any inquiries or collaborations!
 
-- Email: [your.email@example.com](roggybunde@gmail.com)
-- Portfolio link: [Your LinkedIn Profile]([(https://rodgersportfolio.netlify.app/)]
+- Email: [roggybunde@gmail.com](roggybunde@gmail.com)
+- Portfolio link:[(https://rodgersportfolio.netlify.app/)]
 
 ---
 
