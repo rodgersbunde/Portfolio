@@ -1,5 +1,5 @@
-<<<<<<< HEAD
-# Portflio
+
+# Portfolio
 =======
 # Rodgers Bonaventure | Portfolio
 
@@ -48,6 +48,6 @@ Feel free to reach out for any inquiries or collaborations!
 
 ### Thank you for visiting my portfolio!
 
->>>>>>> 7e35639714a6fca8dd3ecd641e5e6f027d2da58b
+
 # Portflio
 # Portflio
